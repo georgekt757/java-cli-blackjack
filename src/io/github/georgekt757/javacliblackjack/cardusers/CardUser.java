@@ -55,6 +55,7 @@ class Player extends CardUser {
     private final int initialPot;
 
     public Player(String name, int bet, int pot) {
+        super();
         this.name = name;
         this.bet = bet;
         this.pot = pot;
