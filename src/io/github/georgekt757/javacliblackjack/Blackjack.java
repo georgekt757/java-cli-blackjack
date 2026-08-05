@@ -63,7 +63,8 @@ public class Blackjack {
     }
 
     public void printHelpMsg() {
-
+        System.out.println("This game is currently in development. More details on how to play will come as");
+        System.out.println("they are implemented, but keep in mind it'll asume you already know how to play\nBlackjack.");
     }
 
     public String mainMenu(Scanner kbd) {
