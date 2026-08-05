@@ -62,6 +62,10 @@ public class Blackjack {
         return new Player(name, bet, pot);
     }
 
+    public void printHelpMsg() {
+
+    }
+
     public String mainMenu(Scanner kbd) {
         String choice;
         
@@ -78,6 +82,7 @@ public class Blackjack {
                     return "start";
                 case "2":
                     printHelpMsg();
+                    break;
                 case "3":
                     return "quit";
                 default:
