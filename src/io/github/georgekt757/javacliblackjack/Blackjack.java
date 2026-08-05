@@ -62,12 +62,12 @@ public class Blackjack {
         return new Player(name, bet, pot);
     }
 
-    public void printHelpMsg() {
+    public static void printHelpMsg() {
         System.out.println("This game is currently in development. More details on how to play will come as");
         System.out.println("they are implemented, but keep in mind it'll asume you already know how to play\nBlackjack.");
     }
 
-    public String mainMenu(Scanner kbd) {
+    public static String mainMenu(Scanner kbd) {
         String choice;
         
         System.out.println(" << Blackjack CLI PRE-ALPHA >>");
@@ -75,7 +75,7 @@ public class Blackjack {
         System.out.println("\nWelcome to Blackjack CLI, a blackjack game played on the command-line interface! If you didn't figure that out, God save you!");
         
         while(true) {
-            System.out.println("What do you wish to do?:\n1. Start\n2. How to play\n3. Quit\n>");
+            System.out.print("What do you wish to do?:\n1. Start\n2. How to play\n3. Quit\n>");
             choice = kbd.nextLine();
 
             switch (choice) {
@@ -95,5 +95,8 @@ public class Blackjack {
 
     public static void main(String[] args) {
         Scanner kbd = new Scanner(System.in);
+        String choice;
+
+        choice = mainMenu(kbd);
     }
 }
