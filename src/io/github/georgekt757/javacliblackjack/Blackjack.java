@@ -79,16 +79,16 @@ public class Blackjack {
             choice = kbd.nextLine();
 
             switch (choice) {
-                case "1":
-                    return "start";
-                case "2":
-                    printHelpMsg();
-                    break;
-                case "3":
-                    return "quit";
-                default:
-                    System.out.println("Please enter a valid option!\n");
-                    break;
+            case "1":
+                return "start";
+            case "2":
+                printHelpMsg();
+                break;
+            case "3":
+                return "quit";
+            default:
+                System.out.println("Please enter a valid option!\n");
+                break;
             }
         }
     }
@@ -97,6 +97,16 @@ public class Blackjack {
         Scanner kbd = new Scanner(System.in);
         String choice;
 
-        choice = mainMenu(kbd);
+        while(true) {
+            choice = mainMenu(kbd);
+
+            switch (choice) {
+            case "start":
+                playTheGame(kbd);
+                break;
+            case "quit":
+                System.exit(0);
+            }
+        }
     }
 }
