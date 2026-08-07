@@ -7,14 +7,22 @@ import java.util.Scanner;
 
 
 public class Game {
-    private Player player;
-    private Dealer dealer;
+    private final Player player;
+    private final Dealer dealer;
     private Scanner kbd;
 
-    public Game() {
-        kbd = new Scanner(System.in);
-        player = initialisePlayer(kbd);
-        dealer = new Dealer();
+    public Game(Scanner kbd) {
+        this.player = initialisePlayer(kbd);
+        this.dealer = new Dealer();
+        this.kbd = kbd;
+    }
+
+    public Player getPlayer() {
+        return this.player;
+    }
+
+    public Dealer getDealer() {
+        return this.dealer;
     }
 
     public Player initialisePlayer(Scanner kbd) {

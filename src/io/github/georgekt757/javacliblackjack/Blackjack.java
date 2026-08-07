@@ -45,7 +45,7 @@ public class Blackjack {
 
             switch (choice) {
             case "start":
-                Game game = new Game();
+                Game game = new Game(kbd);
                 break;
             case "quit":
                 System.exit(0);
