@@ -37,7 +37,7 @@ public class Game {
                 pot = kbd.nextInt();
 
                 if (pot < MINIMUM) {
-                    System.out.println("You're have too little money!");
+                    System.out.println("You have too little money!");
                 } else if (pot % 5 != 0) {
                     System.out.println("The pot must be a multiple of five!");
                 } else {
@@ -45,6 +45,7 @@ public class Game {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You need to input a valid whole number!");
+                kbd.next(); // Consumes invalid input to prevent an infinite loop
             }
         }
 
@@ -67,6 +68,7 @@ public class Game {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You need to input a valid whole number!");
+                kbd.next(); // Consumes invalid input to prevent an infinite loop
             }
         }
 
